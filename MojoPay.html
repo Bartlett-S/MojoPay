@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Payment Processing - MojoPay™</title>
+    <link rel="stylesheet" href="mojo.css" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <h1><em>Mojo</em>Pay™ Payment Request Form</h1>
+      <div class="container">
+        <div class="Personal">
+          <h2>Personal Information</h2>
+          <form id="edit_personal_info" action="process-form.php" method="get">
+            <input type="hidden" name="form_sent" value="1" />
+            <div id="email" class="line">
+              <label for="email">Email Address</label>
+              <input id="address" type="text" name="address" required />
+            </div>
+            <div id="firstName" class="line">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder=""
+                size="80%"
+                maxlength="50"
+                required
+              />
+            </div>
+            <div id="lastName" class="line">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder=""
+                size="25"
+                maxlength="50"
+                required
+              />
+            </div>
+          </form>
+        </div>
+        <!-- end personal -->
+        <div class="accepted">
+          <h2>Accepted Credit Cards</h2>
+          <div class="cards">
+            <img src="./Assets/Mastercard-High-Quality-PNG.png" alt="visa" class="logo">
+            <img src="./Assets/Mastercard-PNG-Clipart.png" alt="mastercard" class="logo">
+            <img src="./Assets/Amex.png" alt="american express" class="logo">
+          </div>
+
+        </div>
+
+        <div class="CreditCardInfo">
+          <h2>Credit Card Information</h2>
+          <div id="creditinfo">
+            <form id="edit_personal_info" action="process-form.php" method="get">
+            <input type="hidden" name="form_sent" value="1" />
+            <div id="cardname" class="line">
+              <label for="cardname">Name On Card</label>
+              <input id="cardname" type="text" name="cardname" required />
+            </div>
+            <div id="cardnumber" class="line">
+              <label for="cardnumber">Card Number</label>
+              <input id="cardnumber" type="text" name="cardnumber" maxlength="16" placeholder="0000 0000 0000 0000" required />
+            </div>
+            <div class="creditcontainer">
+              <div id="expiration" class="line">
+                <label for="expiration">Expiration</label>
+                <div class="expire">
+                  <input id="expirationmonth" type="text" name="expirationmonth" size="4" maxlength="4" placeholder="month" required />
+                  <input id="expirationyear" type="text" name="expirationyear" size="4" maxlength="4" placeholder="Year" required />
+                </div>
+              </div>
+              <div id="expiration" class="line">
+                <label for="cvv">CVV Number</label>
+                <input id="cvv" type="text" name="cvv" size="2" maxlength="3" placeholder="000" required />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end credit-->
+        <input class="submit" type="button" onclick="location.href='submit.html';" value="Submit" />
+        <div id="terms">
+          <input type="checkbox" id="conditions" name="termsandconditions" value="accept">
+          <label for="conditions"> By checking this box, I agree to the terms & conditions</label>
+        </div>
+      </div>
+      <!-- end container -->
+    </main>
+  </body>
+</html>
